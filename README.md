@@ -18,7 +18,7 @@
 
 ## 🔩 SYSTEM OVERVIEW
 
-**STABILIZER-X** is a real-time, IMU-driven self-leveling robotic platform mounted atop a hand-gesture-controlled ground vehicle. Regardless of the terrain the carrier traverses — gravel, ramps, debris, or uneven surfaces — the top platform maintains a **perfectly level horizontal plane** using a closed-loop complementary filter and dual-axis servo correction system.
+**Horizon-X** is a real-time, IMU-driven self-leveling robotic platform mounted atop a hand-gesture-controlled ground vehicle. Regardless of the terrain the carrier traverses — gravel, ramps, debris, or uneven surfaces — the top platform maintains a **perfectly level horizontal plane** using a closed-loop complementary filter and dual-axis servo correction system.
 
 The vehicle base is commanded wirelessly via hand gestures. The upper platform is mechanically **decoupled** from the base dynamics using an **Orthogonal Stacked-Stage mechanism**, actively counteracting roll and pitch disturbances in real time.
 
