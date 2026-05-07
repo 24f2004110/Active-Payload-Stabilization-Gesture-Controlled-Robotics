@@ -1,4 +1,4 @@
-# ⚡ STABILIZER-X // AUTONOMOUS SELF-LEVELING PLATFORM
+# ⚡ HORIZON-X // AUTONOMOUS SELF-LEVELING PLATFORM
 ### *Gesture-Controlled Terrain-Adaptive Robotic Carrier System*
 
 ```
