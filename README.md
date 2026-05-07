@@ -164,7 +164,7 @@ horizon-x/
 
 ```
 ╔══════════════════════════════════════════════════════════╗
-║          STABILIZER-X // END OF DOCUMENTATION           ║
+║          HORIZON-X // END OF DOCUMENTATION           ║
 ║    [ PLATFORM ARMED ] [ IMU LOCKED ] [ SERVOS READY ]   ║
 ╚══════════════════════════════════════════════════════════╝
 ```
