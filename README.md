@@ -3,12 +3,12 @@
 
 ```
 ╔══════════════════════════════════════════════════════════════════╗
-║   ███████╗████████╗ █████╗ ██████╗     ██╗  ██╗                 ║
-║   ██╔════╝╚══██╔══╝██╔══██╗██╔══██╗    ╚██╗██╔╝                 ║
-║   ███████╗   ██║   ███████║██████╔╝     ╚███╔╝                  ║
-║   ╚════██║   ██║   ██╔══██║██╔══██╗     ██╔██╗                  ║
-║   ███████║   ██║   ██║  ██║██████╔╝    ██╔╝ ██╗                 ║
-║   ╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═════╝     ╚═╝  ╚═╝  v1.0          ║
+║   ██╗  ██╗ ██████╗ ██████╗ ██╗███████╗ ██████╗ ███╗   ██╗██╗  ██╗║
+║   ██║  ██║██╔═══██╗██╔══██╗██║╚══███╔╝██╔═══██╗████╗  ██║╚██╗██╔╝║
+║   ███████║██║   ██║██████╔╝██║  ███╔╝ ██║   ██║██╔██╗ ██║ ╚███╔╝ ║
+║   ██╔══██║██║   ██║██╔══██╗██║ ███╔╝  ██║   ██║██║╚██╗██║ ██╔██╗ ║
+║   ██║  ██║╚██████╔╝██║  ██║██║███████╗╚██████╔╝██║ ╚████║██╔╝ ██╗║
+║   ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═╝
 ╚══════════════════════════════════════════════════════════════════╝
 
   STATUS: [ ONLINE ]  IMU: [ ACTIVE ]  SERVOS: [ ARMED ]
@@ -71,12 +71,12 @@ Unlike a traditional suspended gimbal, this project utilizes a **bottom-up pedes
 
 | Stage | Process | Detail |
 |---|---|---|
-| **1. Sensing** | Raw IMU read | 16-bit accel + gyro at 100 Hz[cite: 1] |
-| **2. Fusion** | Complementary filter | 95% gyro + 5% accelerometer[cite: 1] |
-| **3. Smoothing** | Low-pass filter (EMA) | α = 0.1 on fused angle output[cite: 1] |
-| **4. Dead-band** | Noise rejection | ±3° threshold before correction[cite: 1] |
-| **5. Mapping** | Angle → PWM | ±45° input → 40°–140° servo range[cite: 1] |
-| **6. Output** | Servo drive | Opposing pairs for roll and pitch[cite: 1] |
+| **1. Sensing** | Raw IMU read | 16-bit accel + gyro at 100 Hz |
+| **2. Fusion** | Complementary filter | 95% gyro + 5% accelerometer |
+| **3. Smoothing** | Low-pass filter (EMA) | α = 0.1 on fused angle output |
+| **4. Dead-band** | Noise rejection | ±3° threshold before corrections |
+| **5. Mapping** | Angle → PWM | ±45° input → 40°–140° servo range |
+| **6. Output** | Servo drive | Opposing pairs for roll and pitch |
 
 ---
 
@@ -105,7 +105,7 @@ Unlike a traditional suspended gimbal, this project utilizes a **bottom-up pedes
 
 ## ⚙️ TUNING PARAMETERS
 
-Adjust these constants in the firmware to calibrate for your specific build[cite: 1]:
+Adjust these constants in the firmware to calibrate for your specific build:
 
 ```cpp
 // ── Complementary Filter ──────────────────────────────────────────
@@ -128,16 +128,16 @@ targetRoll = 90.0f + (smoothRoll / 45.0f) * 50.0f;
 ## 🌍 REAL-WORLD APPLICATIONS
 
 ### 🏥 Medical & Emergency Response
-Mobile field robots transport fragile diagnostic equipment over uneven disaster-zone terrain[cite: 1].
+Mobile field robots transport fragile diagnostic equipment over uneven disaster-zone terrain.
 
 ### 🎥 Broadcast & Cinematography
-Professional camera rovers use this architecture to keep lenses perfectly level during outdoor shoots[cite: 1].
+Professional camera rovers use this architecture to keep lenses perfectly level during outdoor shoots.
 
 ### 🔬 Scientific Field Robotics
-Geological survey rovers carry sensitive instruments that demand sub-degree level accuracy[cite: 1].
+Geological survey rovers carry sensitive instruments that demand sub-degree level accuracy.
 
 ### 🚜 Precision Agriculture
-Agricultural robots keep sprayers perpendicular to gravity regardless of chassis tilt[cite: 1].
+Agricultural robots keep sprayers perpendicular to gravity regardless of chassis tilt.
 
 ---
 
