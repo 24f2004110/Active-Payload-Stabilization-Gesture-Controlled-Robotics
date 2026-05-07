@@ -144,7 +144,7 @@ Agricultural robots keep sprayers perpendicular to gravity regardless of chassis
 ## 📁 PROJECT STRUCTURE
 
 ```
-stabilizer-x/
+horizon-x/
 ├── src/
 │   └── stabilizer_main.ino      ← Main stabilizer firmware
     └── gesture_transmitter.in
